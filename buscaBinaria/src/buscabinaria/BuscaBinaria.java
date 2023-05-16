@@ -3,9 +3,9 @@ package buscabinaria;
 public class BuscaBinaria {
 public static void main(String[] args) {
 
-    int[] v = {1,2,3,3,5,6,7,8};
+    int[] v = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,-200};
     
-    System.out.println(buscaBinaria(v, 3));
+    System.out.println(buscaBinaria(v, -20));
     
 }
 static boolean buscaBinaria(int v[],int valor){
@@ -17,7 +17,7 @@ private static boolean buscaBinaria(int v[],int valor,int i,int limSup,int limIn
     if(v[i] == valor){
         return true;
     }
-    if(i == limInf){
+    if(limSup-limInf <= 1){
         return false;
     }
     if(v[i] < valor){
